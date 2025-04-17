@@ -63,6 +63,35 @@
       padding: 20px;
       font-size: 0.9rem;
     }
+
+    .wrapper {
+      max-width: 900px;
+      margin: 2rem auto;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      grid-auto-flow: dense;
+    }
+
+    .gallery img {
+      display: block;
+      width: 100%;
+      object-fit: cover;
+      background-color: hsl(0 0% 90%);
+    }
+
+    @media only screen and (max-width: 600px) {
+      .gallery {
+        grid-template-columns: none;
+      }
+
+      .gallery img {
+        width: 300px !important;
+      }
+    }
   </style>
 </head>
 <body>
@@ -112,7 +141,18 @@
 
   <section id="gallery">
     <h2>Some of our latest work</h2>
-    <image src="images/mws_1.jpg" width="200px" height="200px" alt="logo">
+
+    <div class="wrapper">
+      <div class="gallery">
+        <image src="images/mws_1.jpg" width="450px" height="450px" alt="image 1" />
+
+        <image src="images/mws_2.jpg" width="450px" height="450px" alt="image 2" />
+
+        <image src="images/mws_3.jpg" width="450px" height="450px" alt="image 3" />
+
+        <image src="images/mws_4.jpg" width="450px" height="450px" alt="image 4" />
+      </div>
+    </div>
   </section>
 
 <footer>
